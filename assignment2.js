@@ -96,3 +96,26 @@ function getLocalStorage(objKey,myObject)
  myObject = localStorage.getItem(objKey) ? JSON.parse(localStorage.getItem(objKey)) : []);
  return myObject;
 }
+
+/*
+8. Write a function that takes an object and saves each property to
+localStorage using the property name as the key and the property value as
+the value. The function should also retrieve the object from localStorage
+and return it as a new object.
+*/
+
+function localStorage(objKey,myObject)
+{
+ myObject = localStorage.getItem(objKey) ? JSON.parse(localStorage.getItem(objKey)) : []);
+ 
+ const objKey = "Patients";
+ myObject.push({
+  name : "john doe",
+  age : 32,
+  gender : "male",
+  profession : "optician" 
+ })
+
+ localStorage.setItem("myObject", JSON.stringify(myObject));
+ return myObject;
+}
