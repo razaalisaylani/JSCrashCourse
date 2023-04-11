@@ -84,3 +84,15 @@ function setLocalStorage(objKey,objObject)
 {
 window.localStorage.setItem("myObject", JSON.stringify(myObject));
 }
+
+/*
+7. Write a function that retrieves an object from localStorage. The function
+should take one argument, which is a string representing the key used to
+store the object. The function should return the object.
+*/
+
+function getLocalStorage(objKey,myObject)
+{
+ myObject = localStorage.getItem(objKey) ? JSON.parse(localStorage.getItem(objKey)) : []);
+ return myObject;
+}
