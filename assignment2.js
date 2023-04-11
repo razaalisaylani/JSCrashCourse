@@ -10,3 +10,27 @@ function mySum(myNum)
 {
     return num + myNum;   
 }
+
+/*
+2. Write a recursive function that searches an array for a specific value. The
+function should return true if the value is found, and false if it is not. You
+can assume that the array is not nested.
+*/
+
+function search(arr,value)
+{
+  if(arr.length > 0)
+  {
+    if(arr.pop() == value)
+    {
+	return true
+    }
+    else if(arr.length > 0)
+    {
+    search(arr,value)
+    }
+    else
+    { 
+	return false;
+    }
+}
