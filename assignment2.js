@@ -50,3 +50,15 @@ const node = document.createTextNode(myText);
 para.appendChild(node);
 document.body.appendChild(para);
 }
+
+/*
+4. Write a function that adds a new list item to an unordered list in an HTML
+document. The function should take a string argument that will be used as
+the text content of the new list item.
+*/
+
+function addListItem(myText) {
+    var ul = document.getElementById("list");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(myText));
+  }
