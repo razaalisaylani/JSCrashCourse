@@ -34,3 +34,19 @@ function search(arr,value)
 	return false;
     }
 }
+}
+
+/*
+3. Write a function that adds a new paragraph element to the bottom of an
+HTML document. The function should take a string argument that will be
+used as the text content of the new paragraph element.
+*/
+
+function addPara(myText)
+{
+const para = document.createElement("P");
+const node = document.createTextNode(myText);
+
+para.appendChild(node);
+document.body.appendChild(para);
+}
